@@ -1,4 +1,10 @@
-# Version 1.0 - 2023 January 19
+__version__ = '2.1'
+""" 
+Date: 19 Jan 2023
+"""
+
+def hello_world():
+    print("This is my first pip package!")
 import os
 import platform
 
@@ -33,5 +39,7 @@ def printclr(text="enter text", color=None):
     cyan:   36
     white:  37""")
 
-    print("\033[1;{}m{}\033[0m".format(colors[color], "Hello, World!"))
+    print("\033[1;{}m{}\033[0m".format(colors[color], text))
+
+
 
