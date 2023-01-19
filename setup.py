@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-from ratfin.ratfin import __version__
+from ratfin import __version__
 
 
 setup(
