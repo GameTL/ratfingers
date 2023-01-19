@@ -20,15 +20,15 @@ colors = {
     "white": "37"
 }
 
-def clear():
+def clearterm():
     system = platform.system()
-    if platform == 'Windows': # for Windows
+    if system == 'Windows': # for Windows
         os.system("cls")
     else: # for Unix (MacOS, Linux)
         os.system("clear")
 
-def printclr(text="enter text", color=None):
-    if not color:
+def printclr(text="enter text", color : str = ''):
+    if (color == '') or (color not in colors):
         print("please enter a color from the following list: ")
         print("""
     black:  30
@@ -39,8 +39,8 @@ def printclr(text="enter text", color=None):
     magenta:35
     cyan:   36
     white:  37""")
-
-    print("\033[1;{}m{}\033[0m".format(colors[color], text))
+    else:
+        print("\033[1;{}m{}\033[0m".format(colors[color], text))
 
 
 
