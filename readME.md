@@ -10,7 +10,18 @@ pip install git+https://github.com/GameTL/ratfingers.git
 
 ## Devs
 run the following code to install the package in development mode
-```pip install -e .```
+```
+pip install -e .
+```
+or 
 
+```
+python -m build --sdist
+```
+or 
+
+```
+python -m build --wheel
+```
 The main code is in ratfin/\_\_init_\_\.py
 
